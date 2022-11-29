@@ -68,7 +68,9 @@ const ExpenseForm = (props) => {
         enteredTitle: ''
       }
     });
-    // props.onSaveExpenseData(expenseData);
+
+    props.onSaveExpenseData(expenseData);
+    
   }
 
   return (

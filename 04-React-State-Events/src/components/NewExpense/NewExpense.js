@@ -5,17 +5,17 @@ import './NewExpense.css';
 
 const NewExpense = (props) => {
 
-// const saveExpenseDataHadler = (enteredExpenseData) => {
-//   const expenseData = {
-//     ...enteredExpenseData,
-//     id: Math.random().toString()
-//   };
-//   props.onAddExpense(expenseData);
-// };
+const saveExpenseDataHadler = (enteredExpenseData) => {
+  const expenseData = {
+    ...enteredExpenseData,
+    id: Math.random().toString()
+  }
+  props.onAddExpense(expenseData);
+}
 
   return (
     <div className="new-expense">
-      <ExpenseForm/>
+      <ExpenseForm onSaveExpenseData={saveExpenseDataHadler} />
     </div>
   );
 }
